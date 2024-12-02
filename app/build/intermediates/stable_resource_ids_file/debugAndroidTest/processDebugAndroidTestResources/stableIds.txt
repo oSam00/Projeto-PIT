@@ -1,0 +1,2 @@
+cafe.gourmet.app.test:style/WhiteBackgroundTheme = 0x7f010001
+cafe.gourmet.app.test:style/WhiteBackgroundDialogTheme = 0x7f010000

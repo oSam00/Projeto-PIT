@@ -1,0 +1,3 @@
+com.cafe.gourmet.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

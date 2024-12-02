@@ -1,0 +1,6 @@
+com.cafe.gourmet.test.app-jetified-tracing-1.2.0-0 C:\Users\shand\.gradle\caches\8.9\transforms\7d0dbaea7d4d0a35bec5260a8185f002\transformed\jetified-tracing-1.2.0\res
+com.cafe.gourmet.test.app-jetified-core-1.6.1-1 C:\Users\shand\.gradle\caches\8.9\transforms\9660e88ed4a51904c6ec8fab478908b5\transformed\jetified-core-1.6.1\res
+com.cafe.gourmet.test.app-androidTest-2 D:\project\app\build\generated\res\resValues\androidTest\debug
+com.cafe.gourmet.test.app-mergeDebugAndroidTestResources-3 D:\project\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.cafe.gourmet.test.app-mergeDebugAndroidTestResources-4 D:\project\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.cafe.gourmet.test.app-debugAndroidTest-5 D:\project\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
