@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "592982372487",
+    "project_id": "app-faculdade-47379",
+    "storage_bucket": "app-faculdade-47379.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592982372487:android:954da371997dbb3428c822",
+        "android_client_info": {
+          "package_name": "app.faculdade.shander"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVjMLGCkx9uoJtjd7LcX6Z2rCWIbLX86s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

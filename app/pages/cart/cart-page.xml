@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Your Cart" class="bg-blue-500 text-white" />
+    
+    <GridLayout rows="*, auto">
+        <ListView items="{{ cartItems }}" row="0">
+            <ListView.itemTemplate>
+                <GridLayout columns="*, auto, auto" class="p-2 border-b border-gray-200">
+                    <StackLayout col="0">
+                        <Label text="{{ name }}" class="font-bold" />
+                        <Label text="{{ '$' + price }}" class="text-gray-600" />
+                    </StackLayout>
+                    <StackLayout col="1" orientation="horizontal" class="mx-2">
+                        <Button text="-" tap="{{ $parent.onDecreaseQuantity }}" class="btn" />
+                        <Label text="{{ quantity }}" class="mx-2" />
+                        <Button text="+" tap="{{ $parent.onIncreaseQuantity }}" class="btn" />
+                    </StackLayout>
+                    <Button text="🗑️" tap="{{ $parent.onRemoveItem }}" col="2" class="btn text-red-500" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <StackLayout row="1" class="p-4 bg-white">
+            <Label text="{{ 'Total: $' + total }}" class="text-xl font-bold mb-2" />
+            <Button text="Proceed to Checkout" tap="{{ onCheckout }}" class="btn btn-primary" isEnabled="{{ cartItems.length > 0 }}" />
+        </StackLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,66 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
+    <ActionBar title="Menu" class="bg-blue-500 text-white">
+        <ActionItem tap="{{ onCart }}" ios.position="right" android.position="actionBar">
+            <Label text="{{ cartItemCount }}" class="fa-solid p-2" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout rows="auto, *">
+        <!-- Category Filter -->
+        <ScrollView orientation="horizontal" row="0" class="bg-white p-2">
+            <StackLayout orientation="horizontal">
+                <Button 
+                    text="All" 
+                    tap="{{ onCategorySelect }}" 
+                    class="m-1 p-2 rounded-full" 
+                    accessibilityRole="button"
+                    accessibilityLabel="Show all menu items" 
+                />
+                <Button 
+                    text="Coffee" 
+                    tap="{{ onCategorySelect }}" 
+                    class="m-1 p-2 rounded-full"
+                    accessibilityRole="button" 
+                />
+                <Button 
+                    text="Pastries" 
+                    tap="{{ onCategorySelect }}" 
+                    class="m-1 p-2 rounded-full"
+                    accessibilityRole="button" 
+                />
+                <Button 
+                    text="Sandwiches" 
+                    tap="{{ onCategorySelect }}" 
+                    class="m-1 p-2 rounded-full"
+                    accessibilityRole="button" 
+                />
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Product List -->
+        <ListView items="{{ products }}" row="1" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *, auto" class="card" accessibilityRole="button">
+                    <Image src="{{ image }}" width="80" height="80" class="rounded-lg" />
+                    <StackLayout col="1" class="ml-3">
+                        <Label text="{{ name }}" class="font-bold" />
+                        <Label text="{{ description }}" textWrap="true" class="text-gray-600" />
+                        <StackLayout orientation="horizontal">
+                            <Label text="{{ isVegetarian ? '🌱' : '' }}" />
+                            <Label text="{{ isVegan ? '🌿' : '' }}" />
+                            <Label text="{{ isGlutenFree ? '🌾' : '' }}" />
+                        </StackLayout>
+                        <Label text="{{ '$' + price }}" class="text-blue-500 font-bold" />
+                    </StackLayout>
+                    <Button 
+                        text="Add" 
+                        tap="{{ $parent.onAddToCart }}" 
+                        col="2" 
+                        class="btn btn-primary"
+                        accessibilityLabel="Add to cart" 
+                    />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

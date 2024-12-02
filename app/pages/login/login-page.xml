@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Gourmet Café" class="bg-blue-500 text-white">
+        <NavigationButton visibility="collapsed" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="form p-4">
+            <!-- Logo -->
+            <Image src="~/images/logo.png" 
+                   height="120" 
+                   margin="0 0 20 0" 
+                   stretch="aspectFit" />
+            
+            <!-- Title -->
+            <Label text="{{ isLogin ? 'Welcome Back' : 'Create Account' }}" 
+                   class="text-2xl font-bold text-center mb-8" />
+            
+            <!-- Form Fields -->
+            <StackLayout class="input-field">
+                <Label text="Email" class="text-sm font-medium text-gray-600" />
+                <TextField text="{{ email }}" 
+                          hint="Enter your email"
+                          keyboardType="email"
+                          autocorrect="false"
+                          autocapitalizationType="none"
+                          class="input" />
+            </StackLayout>
+            
+            <StackLayout class="input-field">
+                <Label text="Password" class="text-sm font-medium text-gray-600" />
+                <TextField text="{{ password }}"
+                          hint="Enter your password"
+                          secure="true"
+                          class="input" />
+            </StackLayout>
+            
+            <!-- Error Message -->
+            <Label text="{{ errorMessage }}"
+                   textWrap="true"
+                   class="error-message text-center"
+                   visibility="{{ errorMessage ? 'visible' : 'collapsed' }}" />
+            
+            <!-- Primary Action Button -->
+            <Button text="{{ isLogin ? 'Login' : 'Register' }}"
+                    tap="{{ onSubmit }}"
+                    isEnabled="{{ !isLoading }}"
+                    class="btn btn-primary m-t-4" />
+            
+            <!-- Loading Indicator -->
+            <ActivityIndicator busy="{{ isLoading }}"
+                               class="m-t-2"
+                               color="#3b82f6"
+                               width="26"
+                               height="26"
+                               visibility="{{ isLoading ? 'visible' : 'collapsed' }}" />
+            
+            <!-- Secondary Action Button -->
+            <Button text="{{ isLogin ? 'Create New Account' : 'Back to Login' }}"
+                    tap="{{ onToggleMode }}"
+                    isEnabled="{{ !isLoading }}"
+                    class="btn btn-secondary m-t-2" />
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,0 +1,21 @@
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #d97706; /* ou sua cor preferida */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #1f2937; /* ou sua cor preferida */
+    color: #ffffff;
+    border: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
